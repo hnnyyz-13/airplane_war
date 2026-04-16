@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="飞机大战"
+        android:textSize="48sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/login_status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="未登录"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/start_game_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="开始游戏"
+            android:textSize="24sp"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/difficulty_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="难度设置"
+            android:textSize="24sp"
+            android:background="@android:color/holo_green_light"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/rank_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="排行榜"
+            android:textSize="24sp"
+            android:background="@android:color/holo_orange_light"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="音乐设置"
+            android:textSize="24sp"
+            android:background="@android:color/holo_purple"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="用户登录"
+            android:textSize="24sp"
+            android:background="@android:color/holo_red_light"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="退出登录"
+            android:textSize="24sp"
+            android:background="@android:color/holo_orange_light"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>
