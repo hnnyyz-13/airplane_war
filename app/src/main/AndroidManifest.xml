@@ -46,6 +46,24 @@
             android:label="用户登录"
             android:theme="@style/Theme.MyApplication">
         </activity>
+        <activity
+            android:name="hitsz.application.RegisterActivity"
+            android:exported="false"
+            android:label="用户注册"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+        <activity
+            android:name="hitsz.application.OnlineActivity"
+            android:exported="false"
+            android:label="在线对战"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
+        <activity
+            android:name="hitsz.application.OverActivity"
+            android:exported="false"
+            android:label="对战结果"
+            android:theme="@style/Theme.MyApplication">
+        </activity>
     </application>
 
 </manifest>

@@ -844,4 +844,18 @@ public class Game extends SurfaceView implements SurfaceHolder.Callback, Runnabl
         //  surface销毁时调用
         stopGame();
     }
+
+    /**
+     * 获取当前分数（供在线对战使用）
+     */
+    public int getScore() {
+        return score;
+    }
+
+    /**
+     * 获取游戏结束标志（供在线对战使用）
+     */
+    public boolean isGameOverFlag() {
+        return gameOverFlag;
+    }
 }

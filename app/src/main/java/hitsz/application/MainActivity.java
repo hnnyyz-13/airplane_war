@@ -28,10 +28,10 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         // 设置全屏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         // 设置主菜单布局
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         // 初始化按钮
         initializeButtons();
     }
-    
+
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -89,15 +89,16 @@ public class MainActivity extends Activity {
             }
         }, 20);
     }
-    
+
     // 初始化按钮的方法
-    private void initializeButtons() {// 初始化按钮
+    private void initializeButtons() {
         Button startGameButton = findViewById(R.id.start_game_button);
         Button difficultyButton = findViewById(R.id.difficulty_button);
         Button rankButton = findViewById(R.id.rank_button);
         Button settingsButton = findViewById(R.id.settings_button);
         Button loginButton = findViewById(R.id.login_button);
         Button logoutButton = findViewById(R.id.logout_button);
+        Button onlineGameButton = findViewById(R.id.online_game_button);
 
         // 开始游戏按钮点击事件
         startGameButton.setOnClickListener(new View.OnClickListener() {
@@ -159,8 +160,25 @@ public class MainActivity extends Activity {
                 logout();
             }
         });
+
+        // 在线对战按钮点击事件
+        onlineGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 检查是否已登录
+                if (!isLoggedIn()) {
+                    Toast.makeText(MainActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivityForResult(intent, 2);
+                } else {
+                    // 跳转到在线对战界面
+                    Intent intent = new Intent(MainActivity.this, OnlineActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
-    
+
     public void restartGame() {
         // 重置难度选择标志
         hasSelectedDifficulty = false;
@@ -180,7 +198,7 @@ public class MainActivity extends Activity {
             }
         }, 100);
     }
-    
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -188,7 +206,7 @@ public class MainActivity extends Activity {
             game.stopGame();
         }
     }
-    
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -222,14 +240,14 @@ public class MainActivity extends Activity {
             }
         }
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();
         // 只有当游戏正在进行中时才恢复游戏
         // 从排行榜返回时不自动开始游戏
     }
-    
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

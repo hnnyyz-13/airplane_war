@@ -9,14 +9,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="用户登录"
+        android:text="用户注册"
         android:textSize="24sp"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:layout_marginBottom="32dp"/>
 
     <EditText
-        android:id="@+id/username_edit_text"
+        android:id="@+id/register_ID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入用户名"
@@ -26,7 +26,7 @@
         android:layout_marginBottom="16dp"/>
 
     <EditText
-        android:id="@+id/password_edit_text"
+        android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入密码"
@@ -34,33 +34,34 @@
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/white"
         android:inputType="textPassword"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请确认密码"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:inputType="textPassword"
         android:layout_marginBottom="32dp"/>
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="登录"
+        android:text="注册"
         android:textSize="18sp"
         android:textColor="@android:color/white"
         android:background="@android:color/holo_blue_light"
         android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/back_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="注册"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_green_light"
-        android:layout_marginBottom="16dp"/>
-
-    <Button
-        android:id="@+id/cancel_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="取消"
+        android:text="返回登录"
         android:textSize="18sp"
         android:textColor="@android:color/white"
         android:background="@android:color/darker_gray"/>
